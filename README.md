@@ -65,15 +65,13 @@ sandbox-iosxe-recomm-1.cisco.com : ok=1    changed=1    unreachable=0    failed=
 ## This Demo includes the following scenarios
 * Backing up the Router Configs to a Local Directory
 * Backing up the Router Configs to a directory on the AAP Controller
-* Backing up the Router Configs to an External server
 * Backing up the Router Configs to a Git Repo using a new Branch
-* Backing up the Router Configs to a Git Repo in the main branch
-
-
 
 ## Getting started
 
 This demo will require the following environment:
+
+
   * A local Ansible Install (ansible-playbook)
   * An Ansible-Navigator (network-ee execution environment image)
   * Ansible Automation Platform 2.3 (network-ee execution environment image)
@@ -243,81 +241,7 @@ ignored=0
 ### Verify AAP Server backups
 ~~~
 tdubiel@rhel84 backups]$ ls
-~~~
-
-## Backing up the Router Config to an External server
-The only difference between the AAP server and External server demo is the uses of an SSH key instead of a password.
-
-
-## Ansible-Navigator 
-### Dependencies:
-* ansible.cfg (you must create this file since it's excluded in .gitignore)
-    * vault_password_file= <your vault password file>
-* ansible-vault create group_vars/ios/vault.yml
-        * ansible_user: admin
-        * ansible_ssh_private_key_file: ~/<your_key>.pem
-* ansible-navigator.yml ( mounted volumes to access home directory (vault password file) from where ansible-navigator is installed)        
-* hosts.yml
-* group_vars/ios/vars.yml
-
-### remote_backup.yml
-~~~
----
-- name: Simple Backup Remote
-  hosts:
-    - ios
-    - remote_servers
-  gather_facts: false
-  tasks:
-    - name: Backup cisco ios configuration
-      cisco.ios.ios_config:
-        backup: true
-        backup_options:
-          dir_path: /tmp/backups
-      when: inventory_hostname in groups['ios']
-
-    - name: Copy to remote Server
-      ansible.builtin.copy:
-        src: "/tmp/backups/"
-        dest: "~/backups/"
-      when: inventory_hostname in groups['remote_servers']
-~~~
-
-### Output ansible-navigator 
-~~~
-$ ansible-navigator run remote_backup.yml -m stdout
----------------------------------------------------------------------------------
-Execution environment image and pull policy overview
----------------------------------------------------------------------------------
-Execution environment image name:     registry.gitlab.com/tdubiel1/network-ee:latest
-Execution environment image tag:      latest
-Execution environment pull arguments: None
-Execution environment pull policy:    tag
-Execution environment pull needed:    True
----------------------------------------------------------------------------------
-Updating the execution environment
----------------------------------------------------------------------------------
-PLAY [Simple Backup Remote] ****************************************************
-
-TASK [Backup cisco ios configuration] ******************************************
-changed: [sandbox-iosxe-latest-1.cisco.com]
-changed: [sandbox-iosxe-recomm-1.cisco.com]
-
-
-TASK [Copy to remote Server] ***************************************************
-changed: [remote_server]
-
-PLAY RECAP *********************************************************************
-remote_server              : ok=1    changed=1    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
-sandbox-iosxe-latest-1.cisco.com : ok=1    changed=1    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0  
-sandbox-iosxe-recomm-1.cisco.com :  ok=1    changed=1    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0  
-~~~
-
-### Verify AAP Server backups
-~~~
-[ec2-user@ip-172-16-78-197 backups]$ ls
-~~~
- 
+~~~ 
 ## Backing up the Router Configs to a Gitlab Repo using a new Branch
 This demo uses the ansible.scm collection that was included in the network-ee execution environment.
 Available from - registry.gitlab.com/tdubiel1/network-ee:latest
