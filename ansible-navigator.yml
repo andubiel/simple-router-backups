@@ -1,0 +1,17 @@
+---
+ansible-navigator:
+  ansible:
+    inventory:
+      entries:
+      - hosts.yml
+  execution-environment:
+    container-engine: podman
+    enabled: true
+    image: registry.gitlab.com/tdubiel1/network-ee:latest
+    volume-mounts:
+    - src: "/home/tdubiel"
+      dest: "/home/tdubiel"
+  logging:
+    level: debug
+  playbook-artifact:
+    save-as: artifacts/{playbook_name}-artifact-{time_stamp}.json

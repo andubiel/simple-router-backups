@@ -1,0 +1,10 @@
+---
+- name: Simple Backup
+  hosts: ios
+  gather_facts: false
+  tasks:
+    - name: Backup cisco ios configuration
+      cisco.ios.ios_config:
+        backup: true
+        backup_options:
+          dir_path: old_school_backups/

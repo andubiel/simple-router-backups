@@ -1,0 +1,346 @@
+{
+    "plays": [
+        {
+            "__play_name": "Simple Backup Remote",
+            "name": "Simple Backup Remote",
+            "pattern": "ios,remote_servers",
+            "play": "Simple Backup Remote",
+            "play_pattern": "ios,remote_servers",
+            "play_uuid": "56ead63c-ae1a-1fdc-ca4c-000000000008",
+            "playbook": "/home/tdubiel/code/simple-backup/remote_backup.yml",
+            "playbook_uuid": "388beb10-39a3-4ade-8fd1-477d3a535c5c",
+            "tasks": [
+                {
+                    "__changed": true,
+                    "__duration": "3s",
+                    "__host": "sandbox-iosxe-latest-1.cisco.com",
+                    "__number": 0,
+                    "__result": "Ok",
+                    "__task": "Backup cisco ios configuration",
+                    "__task_action": "cisco.ios.ios_config",
+                    "duration": 3.152206,
+                    "end": "2023-05-09T21:53:00.269328",
+                    "event_loop": null,
+                    "host": "sandbox-iosxe-latest-1.cisco.com",
+                    "play": "Simple Backup Remote",
+                    "play_pattern": "ios,remote_servers",
+                    "play_uuid": "56ead63c-ae1a-1fdc-ca4c-000000000008",
+                    "playbook": "/home/tdubiel/code/simple-backup/remote_backup.yml",
+                    "playbook_uuid": "388beb10-39a3-4ade-8fd1-477d3a535c5c",
+                    "remote_addr": "sandbox-iosxe-latest-1.cisco.com",
+                    "res": {
+                        "_ansible_no_log": false,
+                        "backup_path": "/tmp/backups/sandbox-iosxe-latest-1.cisco.com_config.2023-05-09@21:53:00",
+                        "changed": true,
+                        "date": "2023-05-09",
+                        "filename": "sandbox-iosxe-latest-1.cisco.com_config.2023-05-09@21:53:00",
+                        "invocation": {
+                            "module_args": {
+                                "after": null,
+                                "backup": true,
+                                "backup_options": {
+                                    "dir_path": "/tmp/backups",
+                                    "filename": null
+                                },
+                                "before": null,
+                                "defaults": false,
+                                "diff_against": null,
+                                "diff_ignore_lines": null,
+                                "intended_config": null,
+                                "lines": null,
+                                "match": "line",
+                                "multiline_delimiter": "@",
+                                "parents": null,
+                                "replace": "line",
+                                "running_config": null,
+                                "save_when": "never",
+                                "src": null
+                            }
+                        },
+                        "shortname": "/tmp/backups/sandbox-iosxe-latest-1.cisco.com_config",
+                        "time": "21:53:00"
+                    },
+                    "start": "2023-05-09T21:52:57.117122",
+                    "task": "Backup cisco ios configuration",
+                    "task_action": "cisco.ios.ios_config",
+                    "task_args": "",
+                    "task_path": "/home/tdubiel/code/simple-backup/remote_backup.yml:8",
+                    "task_uuid": "56ead63c-ae1a-1fdc-ca4c-00000000000a",
+                    "uuid": "b6090388-2139-4bca-a9ca-e5c59916f3d5"
+                },
+                {
+                    "__changed": false,
+                    "__duration": "0s",
+                    "__host": "remote_server",
+                    "__number": 1,
+                    "__result": "Skipped",
+                    "__task": "Backup cisco ios configuration",
+                    "__task_action": "cisco.ios.ios_config",
+                    "duration": 0.009411,
+                    "end": "2023-05-09T21:52:57.148871",
+                    "event_loop": null,
+                    "host": "remote_server",
+                    "play": "Simple Backup Remote",
+                    "play_pattern": "ios,remote_servers",
+                    "play_uuid": "56ead63c-ae1a-1fdc-ca4c-000000000008",
+                    "playbook": "/home/tdubiel/code/simple-backup/remote_backup.yml",
+                    "playbook_uuid": "388beb10-39a3-4ade-8fd1-477d3a535c5c",
+                    "remote_addr": "remote_server",
+                    "start": "2023-05-09T21:52:57.139460",
+                    "task": "Backup cisco ios configuration",
+                    "task_action": "cisco.ios.ios_config",
+                    "task_args": "",
+                    "task_path": "/home/tdubiel/code/simple-backup/remote_backup.yml:8",
+                    "task_uuid": "56ead63c-ae1a-1fdc-ca4c-00000000000a",
+                    "uuid": "6a018f95-f921-4082-a133-dbe461e43d48"
+                },
+                {
+                    "__changed": false,
+                    "__duration": "0s",
+                    "__host": "sandbox-iosxe-latest-1.cisco.com",
+                    "__number": 2,
+                    "__result": "Skipped",
+                    "__task": "Copy to AAP Server",
+                    "__task_action": "ansible.builtin.copy",
+                    "duration": 0.021358,
+                    "end": "2023-05-09T21:53:00.307212",
+                    "event_loop": null,
+                    "host": "sandbox-iosxe-latest-1.cisco.com",
+                    "play": "Simple Backup Remote",
+                    "play_pattern": "ios,remote_servers",
+                    "play_uuid": "56ead63c-ae1a-1fdc-ca4c-000000000008",
+                    "playbook": "/home/tdubiel/code/simple-backup/remote_backup.yml",
+                    "playbook_uuid": "388beb10-39a3-4ade-8fd1-477d3a535c5c",
+                    "remote_addr": "sandbox-iosxe-latest-1.cisco.com",
+                    "start": "2023-05-09T21:53:00.285854",
+                    "task": "Copy to AAP Server",
+                    "task_action": "ansible.builtin.copy",
+                    "task_args": "",
+                    "task_path": "/home/tdubiel/code/simple-backup/remote_backup.yml:15",
+                    "task_uuid": "56ead63c-ae1a-1fdc-ca4c-00000000000b",
+                    "uuid": "b314b49d-d746-4136-84ec-e7d221510975"
+                },
+                {
+                    "__changed": true,
+                    "__duration": "4s",
+                    "__host": "remote_server",
+                    "__number": 3,
+                    "__result": "Ok",
+                    "__task": "Copy to AAP Server",
+                    "__task_action": "ansible.builtin.copy",
+                    "duration": 4.081603,
+                    "end": "2023-05-09T21:53:04.383300",
+                    "event_loop": null,
+                    "host": "remote_server",
+                    "play": "Simple Backup Remote",
+                    "play_pattern": "ios,remote_servers",
+                    "play_uuid": "56ead63c-ae1a-1fdc-ca4c-000000000008",
+                    "playbook": "/home/tdubiel/code/simple-backup/remote_backup.yml",
+                    "playbook_uuid": "388beb10-39a3-4ade-8fd1-477d3a535c5c",
+                    "remote_addr": "remote_server",
+                    "res": {
+                        "_ansible_no_log": false,
+                        "ansible_facts": {
+                            "discovered_interpreter_python": "/usr/libexec/platform-python"
+                        },
+                        "changed": true,
+                        "checksum": "8745df54320015317f524e6ac1988e6291bbcd3b",
+                        "dest": "/home/ec2-user/backups/sandbox-iosxe-latest-1.cisco.com_config.2023-05-09@21:53:00",
+                        "diff": [],
+                        "gid": 1000,
+                        "group": "ec2-user",
+                        "invocation": {
+                            "module_args": {
+                                "_original_basename": "sandbox-iosxe-latest-1.cisco.com_config.2023-05-09@21:53:00",
+                                "attributes": null,
+                                "backup": false,
+                                "checksum": "8745df54320015317f524e6ac1988e6291bbcd3b",
+                                "content": null,
+                                "dest": "/home/ec2-user/backups/",
+                                "directory_mode": null,
+                                "follow": false,
+                                "force": true,
+                                "group": null,
+                                "local_follow": null,
+                                "mode": null,
+                                "owner": null,
+                                "remote_src": null,
+                                "selevel": null,
+                                "serole": null,
+                                "setype": null,
+                                "seuser": null,
+                                "src": "/home/ec2-user/.ansible/tmp/ansible-tmp-1683669180.9363976-36-162104637790252/source",
+                                "unsafe_writes": false,
+                                "validate": null
+                            }
+                        },
+                        "md5sum": "b527a28f551459bd0c7cf40e88427d35",
+                        "mode": "0664",
+                        "owner": "ec2-user",
+                        "secontext": "unconfined_u:object_r:user_home_t:s0",
+                        "size": 7805,
+                        "src": "/home/ec2-user/.ansible/tmp/ansible-tmp-1683669180.9363976-36-162104637790252/source",
+                        "state": "file",
+                        "uid": 1000
+                    },
+                    "start": "2023-05-09T21:53:00.301697",
+                    "task": "Copy to AAP Server",
+                    "task_action": "ansible.builtin.copy",
+                    "task_args": "",
+                    "task_path": "/home/tdubiel/code/simple-backup/remote_backup.yml:15",
+                    "task_uuid": "56ead63c-ae1a-1fdc-ca4c-00000000000b",
+                    "uuid": "5c14514e-e2ff-4f90-a93a-6ec661ca5fef"
+                }
+            ],
+            "uuid": "56ead63c-ae1a-1fdc-ca4c-000000000008"
+        }
+    ],
+    "settings_entries": {
+        "ansible-navigator": {
+            "ansible": {
+                "config": {
+                    "help": false
+                },
+                "doc": {
+                    "help": false,
+                    "plugin": {
+                        "type": "module"
+                    }
+                },
+                "inventory": {
+                    "entries": [
+                        "/home/tdubiel/code/simple-backup/hosts.yml"
+                    ],
+                    "help": false
+                },
+                "playbook": {
+                    "help": false,
+                    "path": "/home/tdubiel/code/simple-backup/remote_backup.yml"
+                }
+            },
+            "ansible-builder": {
+                "help": false,
+                "workdir": "/home/tdubiel/code/simple-backup"
+            },
+            "app": "run",
+            "collection-doc-cache-path": "/home/tdubiel/.cache/ansible-navigator/collection_doc_cache.db",
+            "color": {
+                "enable": true,
+                "osc4": true
+            },
+            "editor": {
+                "command": "/usr/bin/nano {filename}",
+                "console": true
+            },
+            "exec": {
+                "command": "/bin/bash",
+                "shell": true
+            },
+            "execution-environment": {
+                "container-engine": "podman",
+                "enabled": true,
+                "image": "registry.gitlab.com/tdubiel1/network-ee:latest",
+                "pull": {
+                    "policy": "tag"
+                },
+                "volume-mounts": [
+                    {
+                        "dest": "/home/tdubiel",
+                        "src": "/home/tdubiel"
+                    }
+                ]
+            },
+            "images": {
+                "details": [
+                    "everything"
+                ]
+            },
+            "logging": {
+                "append": true,
+                "file": "/home/tdubiel/code/simple-backup/ansible-navigator.log",
+                "level": "debug"
+            },
+            "mode": "stdout",
+            "playbook-artifact": {
+                "enable": true,
+                "save-as": "artifacts/{playbook_name}-artifact-{time_stamp}.json"
+            },
+            "settings": {
+                "effective": false,
+                "sample": false,
+                "schema": "json",
+                "sources": false
+            },
+            "time-zone": "UTC"
+        }
+    },
+    "settings_sources": {
+        "ansible-navigator.ansible-builder.help": "Defaults",
+        "ansible-navigator.ansible-builder.workdir": "Defaults",
+        "ansible-navigator.ansible-lint.config": "Not set",
+        "ansible-navigator.ansible-lint.lintables": "Not set",
+        "ansible-navigator.ansible-runner.artifact-dir": "Not set",
+        "ansible-navigator.ansible-runner.rotate-artifacts-count": "Not set",
+        "ansible-navigator.ansible-runner.timeout": "Not set",
+        "ansible-navigator.ansible.cmdline": "Not set",
+        "ansible-navigator.ansible.config.help": "Defaults",
+        "ansible-navigator.ansible.config.path": "Not set",
+        "ansible-navigator.ansible.doc.help": "Defaults",
+        "ansible-navigator.ansible.doc.plugin.name": "Not set",
+        "ansible-navigator.ansible.doc.plugin.type": "Defaults",
+        "ansible-navigator.ansible.inventory.entries": "Settings file",
+        "ansible-navigator.ansible.inventory.help": "Defaults",
+        "ansible-navigator.ansible.playbook.help": "Defaults",
+        "ansible-navigator.ansible.playbook.path": "Command line",
+        "ansible-navigator.app": "Command line",
+        "ansible-navigator.collection-doc-cache-path": "Defaults",
+        "ansible-navigator.color.enable": "Defaults",
+        "ansible-navigator.color.osc4": "Defaults",
+        "ansible-navigator.editor.command": "Defaults",
+        "ansible-navigator.editor.console": "Defaults",
+        "ansible-navigator.exec.command": "Defaults",
+        "ansible-navigator.exec.shell": "Defaults",
+        "ansible-navigator.execution-environment.container-engine": "Settings file",
+        "ansible-navigator.execution-environment.container-options": "Not set",
+        "ansible-navigator.execution-environment.enabled": "Settings file",
+        "ansible-navigator.execution-environment.environment-variables.pass": "Not set",
+        "ansible-navigator.execution-environment.environment-variables.set": "Not set",
+        "ansible-navigator.execution-environment.image": "Settings file",
+        "ansible-navigator.execution-environment.pull.arguments": "Not set",
+        "ansible-navigator.execution-environment.pull.policy": "Defaults",
+        "ansible-navigator.execution-environment.volume-mounts": "Settings file",
+        "ansible-navigator.images.details": "Defaults",
+        "ansible-navigator.inventory-columns": "Not set",
+        "ansible-navigator.logging.append": "Defaults",
+        "ansible-navigator.logging.file": "Defaults",
+        "ansible-navigator.logging.level": "Settings file",
+        "ansible-navigator.mode": "Command line",
+        "ansible-navigator.playbook-artifact.enable": "Defaults",
+        "ansible-navigator.playbook-artifact.replay": "Not set",
+        "ansible-navigator.playbook-artifact.save-as": "Settings file",
+        "ansible-navigator.settings.effective": "Defaults",
+        "ansible-navigator.settings.sample": "Defaults",
+        "ansible-navigator.settings.schema": "Defaults",
+        "ansible-navigator.settings.sources": "Defaults",
+        "ansible-navigator.time-zone": "Defaults",
+        "settings_file_path": "/home/tdubiel/code/simple-backup/ansible-navigator.yml",
+        "settings_file_source": "Search path"
+    },
+    "status": "successful",
+    "status_color": 10,
+    "stdout": [
+        "",
+        "PLAY [Simple Backup Remote] ****************************************************",
+        "",
+        "TASK [Backup cisco ios configuration] ******************************************",
+        "\u001b[0;33mchanged: [sandbox-iosxe-latest-1.cisco.com]\u001b[0m",
+        "",
+        "TASK [Copy to AAP Server] ******************************************************",
+        "\u001b[0;33mchanged: [remote_server]\u001b[0m",
+        "",
+        "PLAY RECAP *********************************************************************",
+        "\u001b[0;33mremote_server\u001b[0m              : \u001b[0;32mok=1   \u001b[0m \u001b[0;33mchanged=1   \u001b[0m unreachable=0    failed=0    \u001b[0;36mskipped=1   \u001b[0m rescued=0    ignored=0   ",
+        "\u001b[0;33msandbox-iosxe-latest-1.cisco.com\u001b[0m : \u001b[0;32mok=1   \u001b[0m \u001b[0;33mchanged=1   \u001b[0m unreachable=0    failed=0    \u001b[0;36mskipped=1   \u001b[0m rescued=0    ignored=0   "
+    ],
+    "version": "2.0.0"
+}

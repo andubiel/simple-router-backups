@@ -1,0 +1,46 @@
+---
+- name: Simple Git Backup to Gitlab Repo using Merge
+  hosts: localhost, ios
+  gather_facts: false
+  vars_files:
+    - vars/git.yml
+    - vars/vault.yml #uncomment to run locally
+  tasks:
+   
+    - name: Retrieve a repository from a distant location and make it available locally
+      ansible.scm.git_retrieve:
+        origin:
+          url: "{{ repo_merge }}"
+        parent_directory: /tmp/
+      register: repository
+      when: inventory_hostname == 'localhost'
+
+    - name: Backup cisco ios configuration
+      cisco.ios.ios_config:
+        backup: true
+        backup_options:
+          dir_path: /tmp/routers_backups_merge
+      when: inventory_hostname in groups['ios']   
+
+    - name: This command list the files on the EE
+      shell:
+        cmd: ls 
+        chdir: /tmp/routers_backups_merge
+      when: inventory_hostname == 'localhost'
+      register: files 
+
+    - name: Print the files to be commited to the new branch [{{ repository['branch_name'] }}]
+      ansible.builtin.debug:
+          msg: "{{ files.stdout_lines }}"
+      when: inventory_hostname == 'localhost'
+
+    - name: Publish the changes
+      ansible.scm.git_publish:
+        path: "{{ repository['path'] }}"
+        token: "{{ token }}"
+        user:
+          name: "{{ username }}"
+          email: "{{ email }}"
+      when: inventory_hostname == 'localhost'
+
+

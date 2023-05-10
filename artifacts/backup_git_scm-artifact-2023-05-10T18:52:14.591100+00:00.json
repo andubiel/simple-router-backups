@@ -1,0 +1,659 @@
+{
+    "plays": [
+        {
+            "__play_name": "Simple Git Backup to Gitlab Repo using Merge",
+            "name": "Simple Git Backup to Gitlab Repo using Merge",
+            "pattern": "localhost, ios",
+            "play": "Simple Git Backup to Gitlab Repo using Merge",
+            "play_pattern": "localhost, ios",
+            "play_uuid": "5e12dbaa-d8f5-898d-4468-000000000009",
+            "playbook": "/home/tdubiel/code/simple-backup/backup_git_scm.yml",
+            "playbook_uuid": "018dbf5d-31fe-4500-a5f7-64f13fef98ee",
+            "tasks": [
+                {
+                    "__changed": true,
+                    "__duration": "1s",
+                    "__host": "localhost",
+                    "__number": 0,
+                    "__result": "Ok",
+                    "__task": "Retrieve a repository from a distant location and make it available locally",
+                    "__task_action": "ansible.scm.git_retrieve",
+                    "duration": 0.743601,
+                    "end": "2023-05-10T18:52:09.732211",
+                    "event_loop": null,
+                    "host": "localhost",
+                    "play": "Simple Git Backup to Gitlab Repo using Merge",
+                    "play_pattern": "localhost, ios",
+                    "play_uuid": "5e12dbaa-d8f5-898d-4468-000000000009",
+                    "playbook": "/home/tdubiel/code/simple-backup/backup_git_scm.yml",
+                    "playbook_uuid": "018dbf5d-31fe-4500-a5f7-64f13fef98ee",
+                    "remote_addr": "127.0.0.1",
+                    "res": {
+                        "_ansible_no_log": false,
+                        "branch_name": "ansible-simple_git_backup_to_gitlab_repo_using_merge-2023-05-10T185209.720888+0000",
+                        "branches": [
+                            "main",
+                            "main",
+                            "main"
+                        ],
+                        "changed": true,
+                        "msg": "Successfully retrieved repository: https://gitlab.com/tdubiel1/routers_backups_merge.git",
+                        "name": "routers_backups_merge",
+                        "output": [
+                            {
+                                "command": "git -C /tmp/ clone --depth=1 --progress --no-single-branch https://gitlab.com/tdubiel1/routers_backups_merge.git",
+                                "env": "",
+                                "return_code": 0,
+                                "stderr_lines": [
+                                    "Cloning into 'routers_backups_merge'...",
+                                    "remote: Enumerating objects: 3, done.        ",
+                                    "remote: Counting objects:  33% (1/3)        ",
+                                    "remote: Counting objects:  66% (2/3)        ",
+                                    "remote: Counting objects: 100% (3/3)        ",
+                                    "remote: Counting objects: 100% (3/3), done.        ",
+                                    "remote: Compressing objects:  50% (1/2)        ",
+                                    "remote: Compressing objects: 100% (2/2)        ",
+                                    "remote: Compressing objects: 100% (2/2), done.        ",
+                                    "remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0        ",
+                                    "Receiving objects:  33% (1/3)",
+                                    "Receiving objects:  66% (2/3)",
+                                    "Receiving objects: 100% (3/3)",
+                                    "Receiving objects: 100% (3/3), done."
+                                ],
+                                "stdout_lines": []
+                            },
+                            {
+                                "command": "git -C /tmp/routers_backups_merge branch -a",
+                                "env": "",
+                                "return_code": 0,
+                                "stderr_lines": [],
+                                "stdout_lines": [
+                                    "* main",
+                                    "  remotes/origin/HEAD -> origin/main",
+                                    "  remotes/origin/main"
+                                ]
+                            },
+                            {
+                                "command": "git -C /tmp/routers_backups_merge checkout -t -b ansible-simple_git_backup_to_gitlab_repo_using_merge-2023-05-10T185209.720888+0000",
+                                "env": "",
+                                "return_code": 0,
+                                "stderr_lines": [
+                                    "Switched to a new branch 'ansible-simple_git_backup_to_gitlab_repo_using_merge-2023-05-10T185209.720888+0000'"
+                                ],
+                                "stdout_lines": [
+                                    "branch 'ansible-simple_git_backup_to_gitlab_repo_using_merge-2023-05-10T185209.720888+0000' set up to track 'main'."
+                                ]
+                            }
+                        ],
+                        "path": "/tmp/routers_backups_merge"
+                    },
+                    "start": "2023-05-10T18:52:08.988610",
+                    "task": "Retrieve a repository from a distant location and make it available locally",
+                    "task_action": "ansible.scm.git_retrieve",
+                    "task_args": "",
+                    "task_path": "/home/tdubiel/code/simple-backup/backup_git_scm.yml:10",
+                    "task_uuid": "5e12dbaa-d8f5-898d-4468-00000000000b",
+                    "uuid": "79d724c0-e5dd-45a0-86b9-6d217d18b33a"
+                },
+                {
+                    "__changed": false,
+                    "__duration": "0s",
+                    "__host": "sandbox-iosxe-latest-1.cisco.com",
+                    "__number": 1,
+                    "__result": "Skipped",
+                    "__task": "Retrieve a repository from a distant location and make it available locally",
+                    "__task_action": "ansible.scm.git_retrieve",
+                    "duration": 0.015217,
+                    "end": "2023-05-10T18:52:09.043626",
+                    "event_loop": null,
+                    "host": "sandbox-iosxe-latest-1.cisco.com",
+                    "play": "Simple Git Backup to Gitlab Repo using Merge",
+                    "play_pattern": "localhost, ios",
+                    "play_uuid": "5e12dbaa-d8f5-898d-4468-000000000009",
+                    "playbook": "/home/tdubiel/code/simple-backup/backup_git_scm.yml",
+                    "playbook_uuid": "018dbf5d-31fe-4500-a5f7-64f13fef98ee",
+                    "remote_addr": "sandbox-iosxe-latest-1.cisco.com",
+                    "start": "2023-05-10T18:52:09.028409",
+                    "task": "Retrieve a repository from a distant location and make it available locally",
+                    "task_action": "ansible.scm.git_retrieve",
+                    "task_args": "",
+                    "task_path": "/home/tdubiel/code/simple-backup/backup_git_scm.yml:10",
+                    "task_uuid": "5e12dbaa-d8f5-898d-4468-00000000000b",
+                    "uuid": "1cd24118-973d-415f-b318-829fb979961e"
+                },
+                {
+                    "__changed": false,
+                    "__duration": "0s",
+                    "__host": "sandbox-iosxe-recomm-1.cisco.com",
+                    "__number": 2,
+                    "__result": "Skipped",
+                    "__task": "Retrieve a repository from a distant location and make it available locally",
+                    "__task_action": "ansible.scm.git_retrieve",
+                    "duration": 0.013544,
+                    "end": "2023-05-10T18:52:09.051478",
+                    "event_loop": null,
+                    "host": "sandbox-iosxe-recomm-1.cisco.com",
+                    "play": "Simple Git Backup to Gitlab Repo using Merge",
+                    "play_pattern": "localhost, ios",
+                    "play_uuid": "5e12dbaa-d8f5-898d-4468-000000000009",
+                    "playbook": "/home/tdubiel/code/simple-backup/backup_git_scm.yml",
+                    "playbook_uuid": "018dbf5d-31fe-4500-a5f7-64f13fef98ee",
+                    "remote_addr": "sandbox-iosxe-recomm-1.cisco.com",
+                    "start": "2023-05-10T18:52:09.037934",
+                    "task": "Retrieve a repository from a distant location and make it available locally",
+                    "task_action": "ansible.scm.git_retrieve",
+                    "task_args": "",
+                    "task_path": "/home/tdubiel/code/simple-backup/backup_git_scm.yml:10",
+                    "task_uuid": "5e12dbaa-d8f5-898d-4468-00000000000b",
+                    "uuid": "94a04ac1-402d-46a2-ac62-9fda3e63c0fd"
+                },
+                {
+                    "__changed": false,
+                    "__duration": "0s",
+                    "__host": "localhost",
+                    "__number": 3,
+                    "__result": "Skipped",
+                    "__task": "Backup cisco ios configuration",
+                    "__task_action": "cisco.ios.ios_config",
+                    "duration": 0.020234,
+                    "end": "2023-05-10T18:52:09.764127",
+                    "event_loop": null,
+                    "host": "localhost",
+                    "play": "Simple Git Backup to Gitlab Repo using Merge",
+                    "play_pattern": "localhost, ios",
+                    "play_uuid": "5e12dbaa-d8f5-898d-4468-000000000009",
+                    "playbook": "/home/tdubiel/code/simple-backup/backup_git_scm.yml",
+                    "playbook_uuid": "018dbf5d-31fe-4500-a5f7-64f13fef98ee",
+                    "remote_addr": "127.0.0.1",
+                    "start": "2023-05-10T18:52:09.743893",
+                    "task": "Backup cisco ios configuration",
+                    "task_action": "cisco.ios.ios_config",
+                    "task_args": "",
+                    "task_path": "/home/tdubiel/code/simple-backup/backup_git_scm.yml:18",
+                    "task_uuid": "5e12dbaa-d8f5-898d-4468-00000000000c",
+                    "uuid": "079f3c92-4ddf-4335-b935-5fd57ba0f91c"
+                },
+                {
+                    "__changed": false,
+                    "__duration": "2s",
+                    "__host": "sandbox-iosxe-latest-1.cisco.com",
+                    "__number": 4,
+                    "__result": "Failed",
+                    "__task": "Backup cisco ios configuration",
+                    "__task_action": "cisco.ios.ios_config",
+                    "duration": 2.304784,
+                    "end": "2023-05-10T18:52:12.057157",
+                    "event_loop": null,
+                    "host": "sandbox-iosxe-latest-1.cisco.com",
+                    "ignore_errors": null,
+                    "play": "Simple Git Backup to Gitlab Repo using Merge",
+                    "play_pattern": "localhost, ios",
+                    "play_uuid": "5e12dbaa-d8f5-898d-4468-000000000009",
+                    "playbook": "/home/tdubiel/code/simple-backup/backup_git_scm.yml",
+                    "playbook_uuid": "018dbf5d-31fe-4500-a5f7-64f13fef98ee",
+                    "remote_addr": "sandbox-iosxe-latest-1.cisco.com",
+                    "res": {
+                        "_ansible_no_log": false,
+                        "changed": false,
+                        "invocation": {
+                            "module_args": {
+                                "after": null,
+                                "backup": true,
+                                "backup_options": {
+                                    "dir_path": "/tmp/routers_backups_merge",
+                                    "filename": null
+                                },
+                                "before": null,
+                                "defaults": false,
+                                "diff_against": null,
+                                "diff_ignore_lines": null,
+                                "intended_config": null,
+                                "lines": null,
+                                "match": "line",
+                                "multiline_delimiter": "@",
+                                "parents": null,
+                                "replace": "line",
+                                "running_config": null,
+                                "save_when": "never",
+                                "src": null
+                            }
+                        },
+                        "msg": "cli prompt is not identified from the last received response window: b'\\r\\nCat8000V#'"
+                    },
+                    "start": "2023-05-10T18:52:09.752373",
+                    "task": "Backup cisco ios configuration",
+                    "task_action": "cisco.ios.ios_config",
+                    "task_args": "",
+                    "task_path": "/home/tdubiel/code/simple-backup/backup_git_scm.yml:18",
+                    "task_uuid": "5e12dbaa-d8f5-898d-4468-00000000000c",
+                    "uuid": "01222dae-7f9f-4e75-92e6-17aad5703b8e"
+                },
+                {
+                    "__changed": true,
+                    "__duration": "3s",
+                    "__host": "sandbox-iosxe-recomm-1.cisco.com",
+                    "__number": 5,
+                    "__result": "Ok",
+                    "__task": "Backup cisco ios configuration",
+                    "__task_action": "cisco.ios.ios_config",
+                    "duration": 3.092028,
+                    "end": "2023-05-10T18:52:12.852252",
+                    "event_loop": null,
+                    "host": "sandbox-iosxe-recomm-1.cisco.com",
+                    "play": "Simple Git Backup to Gitlab Repo using Merge",
+                    "play_pattern": "localhost, ios",
+                    "play_uuid": "5e12dbaa-d8f5-898d-4468-000000000009",
+                    "playbook": "/home/tdubiel/code/simple-backup/backup_git_scm.yml",
+                    "playbook_uuid": "018dbf5d-31fe-4500-a5f7-64f13fef98ee",
+                    "remote_addr": "sandbox-iosxe-recomm-1.cisco.com",
+                    "res": {
+                        "_ansible_no_log": false,
+                        "backup_path": "/tmp/routers_backups_merge/sandbox-iosxe-recomm-1.cisco.com_config.2023-05-10@18:52:12",
+                        "changed": true,
+                        "date": "2023-05-10",
+                        "filename": "sandbox-iosxe-recomm-1.cisco.com_config.2023-05-10@18:52:12",
+                        "invocation": {
+                            "module_args": {
+                                "after": null,
+                                "backup": true,
+                                "backup_options": {
+                                    "dir_path": "/tmp/routers_backups_merge",
+                                    "filename": null
+                                },
+                                "before": null,
+                                "defaults": false,
+                                "diff_against": null,
+                                "diff_ignore_lines": null,
+                                "intended_config": null,
+                                "lines": null,
+                                "match": "line",
+                                "multiline_delimiter": "@",
+                                "parents": null,
+                                "replace": "line",
+                                "running_config": null,
+                                "save_when": "never",
+                                "src": null
+                            }
+                        },
+                        "shortname": "/tmp/routers_backups_merge/sandbox-iosxe-recomm-1.cisco.com_config",
+                        "time": "18:52:12"
+                    },
+                    "start": "2023-05-10T18:52:09.760224",
+                    "task": "Backup cisco ios configuration",
+                    "task_action": "cisco.ios.ios_config",
+                    "task_args": "",
+                    "task_path": "/home/tdubiel/code/simple-backup/backup_git_scm.yml:18",
+                    "task_uuid": "5e12dbaa-d8f5-898d-4468-00000000000c",
+                    "uuid": "edd59413-2074-4295-8951-23c3b1eef5d2"
+                },
+                {
+                    "__changed": true,
+                    "__duration": "1s",
+                    "__host": "localhost",
+                    "__number": 6,
+                    "__result": "Ok",
+                    "__task": "This command list the files on the EE",
+                    "__task_action": "shell",
+                    "duration": 1.335351,
+                    "end": "2023-05-10T18:52:14.193400",
+                    "event_loop": null,
+                    "host": "localhost",
+                    "play": "Simple Git Backup to Gitlab Repo using Merge",
+                    "play_pattern": "localhost, ios",
+                    "play_uuid": "5e12dbaa-d8f5-898d-4468-000000000009",
+                    "playbook": "/home/tdubiel/code/simple-backup/backup_git_scm.yml",
+                    "playbook_uuid": "018dbf5d-31fe-4500-a5f7-64f13fef98ee",
+                    "remote_addr": "127.0.0.1",
+                    "res": {
+                        "_ansible_no_log": false,
+                        "changed": true,
+                        "cmd": "ls",
+                        "delta": "0:00:01.004747",
+                        "end": "2023-05-10 18:52:14.129762",
+                        "invocation": {
+                            "module_args": {
+                                "_raw_params": "ls",
+                                "_uses_shell": true,
+                                "argv": null,
+                                "chdir": "/tmp/routers_backups_merge",
+                                "creates": null,
+                                "executable": null,
+                                "removes": null,
+                                "stdin": null,
+                                "stdin_add_newline": true,
+                                "strip_empty_ends": true,
+                                "warn": false
+                            }
+                        },
+                        "msg": "",
+                        "rc": 0,
+                        "start": "2023-05-10 18:52:13.125015",
+                        "stderr": "",
+                        "stderr_lines": [],
+                        "stdout": "README.md\nsandbox-iosxe-recomm-1.cisco.com_config.2023-05-10@18:52:12",
+                        "stdout_lines": [
+                            "README.md",
+                            "sandbox-iosxe-recomm-1.cisco.com_config.2023-05-10@18:52:12"
+                        ]
+                    },
+                    "start": "2023-05-10T18:52:12.858049",
+                    "task": "This command list the files on the EE",
+                    "task_action": "shell",
+                    "task_args": "",
+                    "task_path": "/home/tdubiel/code/simple-backup/backup_git_scm.yml:25",
+                    "task_uuid": "5e12dbaa-d8f5-898d-4468-00000000000d",
+                    "uuid": "7da5e695-d994-4d9e-be06-acd09d9afd96"
+                },
+                {
+                    "__changed": false,
+                    "__duration": "0s",
+                    "__host": "sandbox-iosxe-recomm-1.cisco.com",
+                    "__number": 7,
+                    "__result": "Skipped",
+                    "__task": "This command list the files on the EE",
+                    "__task_action": "shell",
+                    "duration": 0.013111,
+                    "end": "2023-05-10T18:52:12.881850",
+                    "event_loop": null,
+                    "host": "sandbox-iosxe-recomm-1.cisco.com",
+                    "play": "Simple Git Backup to Gitlab Repo using Merge",
+                    "play_pattern": "localhost, ios",
+                    "play_uuid": "5e12dbaa-d8f5-898d-4468-000000000009",
+                    "playbook": "/home/tdubiel/code/simple-backup/backup_git_scm.yml",
+                    "playbook_uuid": "018dbf5d-31fe-4500-a5f7-64f13fef98ee",
+                    "remote_addr": "sandbox-iosxe-recomm-1.cisco.com",
+                    "start": "2023-05-10T18:52:12.868739",
+                    "task": "This command list the files on the EE",
+                    "task_action": "shell",
+                    "task_args": "",
+                    "task_path": "/home/tdubiel/code/simple-backup/backup_git_scm.yml:25",
+                    "task_uuid": "5e12dbaa-d8f5-898d-4468-00000000000d",
+                    "uuid": "a860de73-b668-4019-81f6-bc4a419c24d9"
+                },
+                {
+                    "__changed": false,
+                    "__duration": "0s",
+                    "__host": "localhost",
+                    "__number": 8,
+                    "__result": "Ok",
+                    "__task": "Print files on the screen",
+                    "__task_action": "ansible.builtin.debug",
+                    "duration": 0.015836,
+                    "end": "2023-05-10T18:52:14.219743",
+                    "event_loop": null,
+                    "host": "localhost",
+                    "play": "Simple Git Backup to Gitlab Repo using Merge",
+                    "play_pattern": "localhost, ios",
+                    "play_uuid": "5e12dbaa-d8f5-898d-4468-000000000009",
+                    "playbook": "/home/tdubiel/code/simple-backup/backup_git_scm.yml",
+                    "playbook_uuid": "018dbf5d-31fe-4500-a5f7-64f13fef98ee",
+                    "remote_addr": "127.0.0.1",
+                    "res": {
+                        "_ansible_no_log": false,
+                        "_ansible_verbose_always": true,
+                        "changed": false,
+                        "msg": [
+                            "README.md",
+                            "sandbox-iosxe-recomm-1.cisco.com_config.2023-05-10@18:52:12"
+                        ]
+                    },
+                    "start": "2023-05-10T18:52:14.203907",
+                    "task": "Print files on the screen",
+                    "task_action": "ansible.builtin.debug",
+                    "task_args": "",
+                    "task_path": "/home/tdubiel/code/simple-backup/backup_git_scm.yml:32",
+                    "task_uuid": "5e12dbaa-d8f5-898d-4468-00000000000e",
+                    "uuid": "0f49a93a-ef12-40e0-8c78-f6f6b76de1aa"
+                },
+                {
+                    "__changed": false,
+                    "__duration": "0s",
+                    "__host": "sandbox-iosxe-recomm-1.cisco.com",
+                    "__number": 9,
+                    "__result": "Skipped",
+                    "__task": "Print files on the screen",
+                    "__task_action": "ansible.builtin.debug",
+                    "duration": 0.012508,
+                    "end": "2023-05-10T18:52:14.226063",
+                    "event_loop": null,
+                    "host": "sandbox-iosxe-recomm-1.cisco.com",
+                    "play": "Simple Git Backup to Gitlab Repo using Merge",
+                    "play_pattern": "localhost, ios",
+                    "play_uuid": "5e12dbaa-d8f5-898d-4468-000000000009",
+                    "playbook": "/home/tdubiel/code/simple-backup/backup_git_scm.yml",
+                    "playbook_uuid": "018dbf5d-31fe-4500-a5f7-64f13fef98ee",
+                    "remote_addr": "sandbox-iosxe-recomm-1.cisco.com",
+                    "start": "2023-05-10T18:52:14.213555",
+                    "task": "Print files on the screen",
+                    "task_action": "ansible.builtin.debug",
+                    "task_args": "",
+                    "task_path": "/home/tdubiel/code/simple-backup/backup_git_scm.yml:32",
+                    "task_uuid": "5e12dbaa-d8f5-898d-4468-00000000000e",
+                    "uuid": "56e38fa5-0170-499a-a205-c53d3c7bbb4f"
+                },
+                {
+                    "__changed": false,
+                    "__duration": "0s",
+                    "__host": "localhost",
+                    "__number": 10,
+                    "__result": "Failed",
+                    "__task": "Publish the changes",
+                    "__task_action": "ansible.scm.git_publish",
+                    "duration": 0.01318,
+                    "end": "2023-05-10T18:52:14.247875",
+                    "event_loop": null,
+                    "host": "localhost",
+                    "ignore_errors": null,
+                    "play": "Simple Git Backup to Gitlab Repo using Merge",
+                    "play_pattern": "localhost, ios",
+                    "play_uuid": "5e12dbaa-d8f5-898d-4468-000000000009",
+                    "playbook": "/home/tdubiel/code/simple-backup/backup_git_scm.yml",
+                    "playbook_uuid": "018dbf5d-31fe-4500-a5f7-64f13fef98ee",
+                    "remote_addr": "127.0.0.1",
+                    "res": {
+                        "_ansible_no_log": false,
+                        "msg": "The task includes an option with an undefined variable. The error was: 'token' is undefined\n\nThe error appears to be in '/home/tdubiel/code/simple-backup/backup_git_scm.yml': line 37, column 7, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n    - name: Publish the changes\n      ^ here\n"
+                    },
+                    "start": "2023-05-10T18:52:14.234695",
+                    "task": "Publish the changes",
+                    "task_action": "ansible.scm.git_publish",
+                    "task_args": "",
+                    "task_path": "/home/tdubiel/code/simple-backup/backup_git_scm.yml:37",
+                    "task_uuid": "5e12dbaa-d8f5-898d-4468-00000000000f",
+                    "uuid": "8d29dbea-edda-4e1f-994f-939b8c654085"
+                },
+                {
+                    "__changed": false,
+                    "__duration": "0s",
+                    "__host": "sandbox-iosxe-recomm-1.cisco.com",
+                    "__number": 11,
+                    "__result": "Skipped",
+                    "__task": "Publish the changes",
+                    "__task_action": "ansible.scm.git_publish",
+                    "duration": 0.010624,
+                    "end": "2023-05-10T18:52:14.252358",
+                    "event_loop": null,
+                    "host": "sandbox-iosxe-recomm-1.cisco.com",
+                    "play": "Simple Git Backup to Gitlab Repo using Merge",
+                    "play_pattern": "localhost, ios",
+                    "play_uuid": "5e12dbaa-d8f5-898d-4468-000000000009",
+                    "playbook": "/home/tdubiel/code/simple-backup/backup_git_scm.yml",
+                    "playbook_uuid": "018dbf5d-31fe-4500-a5f7-64f13fef98ee",
+                    "remote_addr": "sandbox-iosxe-recomm-1.cisco.com",
+                    "start": "2023-05-10T18:52:14.241734",
+                    "task": "Publish the changes",
+                    "task_action": "ansible.scm.git_publish",
+                    "task_args": "",
+                    "task_path": "/home/tdubiel/code/simple-backup/backup_git_scm.yml:37",
+                    "task_uuid": "5e12dbaa-d8f5-898d-4468-00000000000f",
+                    "uuid": "19f0ee7d-823e-481b-8c5b-8d31ce914123"
+                }
+            ],
+            "uuid": "5e12dbaa-d8f5-898d-4468-000000000009"
+        }
+    ],
+    "settings_entries": {
+        "ansible-navigator": {
+            "ansible": {
+                "config": {
+                    "help": false
+                },
+                "doc": {
+                    "help": false,
+                    "plugin": {
+                        "type": "module"
+                    }
+                },
+                "inventory": {
+                    "entries": [
+                        "/home/tdubiel/code/simple-backup/hosts.yml"
+                    ],
+                    "help": false
+                },
+                "playbook": {
+                    "help": false,
+                    "path": "/home/tdubiel/code/simple-backup/backup_git_scm.yml"
+                }
+            },
+            "ansible-builder": {
+                "help": false,
+                "workdir": "/home/tdubiel/code/simple-backup"
+            },
+            "app": "run",
+            "collection-doc-cache-path": "/home/tdubiel/.cache/ansible-navigator/collection_doc_cache.db",
+            "color": {
+                "enable": true,
+                "osc4": true
+            },
+            "editor": {
+                "command": "/usr/bin/nano {filename}",
+                "console": true
+            },
+            "exec": {
+                "command": "/bin/bash",
+                "shell": true
+            },
+            "execution-environment": {
+                "container-engine": "podman",
+                "enabled": true,
+                "image": "registry.gitlab.com/tdubiel1/network-ee:latest",
+                "pull": {
+                    "policy": "tag"
+                },
+                "volume-mounts": [
+                    {
+                        "dest": "/home/tdubiel",
+                        "src": "/home/tdubiel"
+                    }
+                ]
+            },
+            "images": {
+                "details": [
+                    "everything"
+                ]
+            },
+            "logging": {
+                "append": true,
+                "file": "/home/tdubiel/code/simple-backup/ansible-navigator.log",
+                "level": "debug"
+            },
+            "mode": "stdout",
+            "playbook-artifact": {
+                "enable": true,
+                "save-as": "artifacts/{playbook_name}-artifact-{time_stamp}.json"
+            },
+            "settings": {
+                "effective": false,
+                "sample": false,
+                "schema": "json",
+                "sources": false
+            },
+            "time-zone": "UTC"
+        }
+    },
+    "settings_sources": {
+        "ansible-navigator.ansible-builder.help": "Defaults",
+        "ansible-navigator.ansible-builder.workdir": "Defaults",
+        "ansible-navigator.ansible-lint.config": "Not set",
+        "ansible-navigator.ansible-lint.lintables": "Not set",
+        "ansible-navigator.ansible-runner.artifact-dir": "Not set",
+        "ansible-navigator.ansible-runner.rotate-artifacts-count": "Not set",
+        "ansible-navigator.ansible-runner.timeout": "Not set",
+        "ansible-navigator.ansible.cmdline": "Not set",
+        "ansible-navigator.ansible.config.help": "Defaults",
+        "ansible-navigator.ansible.config.path": "Not set",
+        "ansible-navigator.ansible.doc.help": "Defaults",
+        "ansible-navigator.ansible.doc.plugin.name": "Not set",
+        "ansible-navigator.ansible.doc.plugin.type": "Defaults",
+        "ansible-navigator.ansible.inventory.entries": "Settings file",
+        "ansible-navigator.ansible.inventory.help": "Defaults",
+        "ansible-navigator.ansible.playbook.help": "Defaults",
+        "ansible-navigator.ansible.playbook.path": "Command line",
+        "ansible-navigator.app": "Command line",
+        "ansible-navigator.collection-doc-cache-path": "Defaults",
+        "ansible-navigator.color.enable": "Defaults",
+        "ansible-navigator.color.osc4": "Defaults",
+        "ansible-navigator.editor.command": "Defaults",
+        "ansible-navigator.editor.console": "Defaults",
+        "ansible-navigator.exec.command": "Defaults",
+        "ansible-navigator.exec.shell": "Defaults",
+        "ansible-navigator.execution-environment.container-engine": "Settings file",
+        "ansible-navigator.execution-environment.container-options": "Not set",
+        "ansible-navigator.execution-environment.enabled": "Settings file",
+        "ansible-navigator.execution-environment.environment-variables.pass": "Not set",
+        "ansible-navigator.execution-environment.environment-variables.set": "Not set",
+        "ansible-navigator.execution-environment.image": "Settings file",
+        "ansible-navigator.execution-environment.pull.arguments": "Not set",
+        "ansible-navigator.execution-environment.pull.policy": "Defaults",
+        "ansible-navigator.execution-environment.volume-mounts": "Settings file",
+        "ansible-navigator.images.details": "Defaults",
+        "ansible-navigator.inventory-columns": "Not set",
+        "ansible-navigator.logging.append": "Defaults",
+        "ansible-navigator.logging.file": "Defaults",
+        "ansible-navigator.logging.level": "Settings file",
+        "ansible-navigator.mode": "Command line",
+        "ansible-navigator.playbook-artifact.enable": "Defaults",
+        "ansible-navigator.playbook-artifact.replay": "Not set",
+        "ansible-navigator.playbook-artifact.save-as": "Settings file",
+        "ansible-navigator.settings.effective": "Defaults",
+        "ansible-navigator.settings.sample": "Defaults",
+        "ansible-navigator.settings.schema": "Defaults",
+        "ansible-navigator.settings.sources": "Defaults",
+        "ansible-navigator.time-zone": "Defaults",
+        "settings_file_path": "/home/tdubiel/code/simple-backup/ansible-navigator.yml",
+        "settings_file_source": "Search path"
+    },
+    "status": "failed",
+    "status_color": 9,
+    "stdout": [
+        "",
+        "PLAY [Simple Git Backup to Gitlab Repo using Merge] ****************************",
+        "",
+        "TASK [Retrieve a repository from a distant location and make it available locally] ***",
+        "\u001b[0;33mchanged: [localhost]\u001b[0m",
+        "",
+        "TASK [Backup cisco ios configuration] ******************************************",
+        "\u001b[0;31mfatal: [sandbox-iosxe-latest-1.cisco.com]: FAILED! => {\"changed\": false, \"msg\": \"cli prompt is not identified from the last received response window: b'\\\\r\\\\nCat8000V#'\"}\u001b[0m",
+        "\u001b[0;33mchanged: [sandbox-iosxe-recomm-1.cisco.com]\u001b[0m",
+        "",
+        "TASK [This command list the files on the EE] ***********************************",
+        "\u001b[0;33mchanged: [localhost]\u001b[0m",
+        "",
+        "TASK [Print files on the screen] ***********************************************",
+        "\u001b[0;32mok: [localhost] => {\u001b[0m",
+        "\u001b[0;32m    \"msg\": [\u001b[0m",
+        "\u001b[0;32m        \"README.md\",\u001b[0m",
+        "\u001b[0;32m        \"sandbox-iosxe-recomm-1.cisco.com_config.2023-05-10@18:52:12\"\u001b[0m",
+        "\u001b[0;32m    ]\u001b[0m",
+        "\u001b[0;32m}\u001b[0m",
+        "",
+        "TASK [Publish the changes] *****************************************************",
+        "\u001b[0;31mfatal: [localhost]: FAILED! => {\"msg\": \"The task includes an option with an undefined variable. The error was: 'token' is undefined\\n\\nThe error appears to be in '/home/tdubiel/code/simple-backup/backup_git_scm.yml': line 37, column 7, but may\\nbe elsewhere in the file depending on the exact syntax problem.\\n\\nThe offending line appears to be:\\n\\n\\n    - name: Publish the changes\\n      ^ here\\n\"}\u001b[0m",
+        "",
+        "PLAY RECAP *********************************************************************",
+        "\u001b[0;31mlocalhost\u001b[0m                  : \u001b[0;32mok=3   \u001b[0m \u001b[0;33mchanged=2   \u001b[0m unreachable=0    \u001b[0;31mfailed=1   \u001b[0m \u001b[0;36mskipped=1   \u001b[0m rescued=0    ignored=0   ",
+        "\u001b[0;31msandbox-iosxe-latest-1.cisco.com\u001b[0m : ok=0    changed=0    unreachable=0    \u001b[0;31mfailed=1   \u001b[0m \u001b[0;36mskipped=1   \u001b[0m rescued=0    ignored=0   ",
+        "\u001b[0;33msandbox-iosxe-recomm-1.cisco.com\u001b[0m : \u001b[0;32mok=1   \u001b[0m \u001b[0;33mchanged=1   \u001b[0m unreachable=0    failed=0    \u001b[0;36mskipped=4   \u001b[0m rescued=0    ignored=0   "
+    ],
+    "version": "2.0.0"
+}

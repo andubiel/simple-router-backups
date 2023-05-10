@@ -1,0 +1,19 @@
+---
+- name: Simple Backup
+  hosts:
+    - ios
+    - local_servers
+  gather_facts: false
+  tasks:
+    - name: Backup cisco ios configuration
+      cisco.ios.ios_config:
+        backup: true
+        backup_options:
+          dir_path: /tmp/backups
+      when: inventory_hostname in groups['ios']
+
+    - name: Copy to AAP Server
+      ansible.builtin.copy:
+        src: "/tmp/backups/"
+        dest: "~/backups/"
+      when: inventory_hostname in groups['local_servers']
